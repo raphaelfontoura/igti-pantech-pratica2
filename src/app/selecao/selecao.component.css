@@ -1,0 +1,19 @@
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  padding-bottom: 8px;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 1.15em;
+  padding-top: 12px;
+}
+
+span {
+  font-style: italic;
+  font-size: 0.9em;
+}

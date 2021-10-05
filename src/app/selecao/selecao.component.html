@@ -1,0 +1,9 @@
+<h3>{{titulo}}</h3>
+<span *ngIf="escolhaAte > 1">
+  escolha até {{escolhaAte}} 
+  <span *ngIf="escolhas.length <= escolhaAte && escolhas.length > 1"> ({{escolhas.length}} selecionados) </span>
+  <span *ngIf="escolhas.length == 1"> ({{escolhas.length}} selecionado) </span>
+</span>
+
+<label *ngFor="let item of opcoes"><input [type]="type" name="opcoes" (change)="escolhasChange(item)" [disabled]="escolhas.length >= escolhaAte && 
+  !escolhas.includes(item) && type!=='radio' ">{{item}}</label>
